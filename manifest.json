@@ -1,0 +1,35 @@
+{
+  "name": "Mr Aparat",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "Post a timed message on the Stream in aparat. Created by Mr Point",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "browser_action": {
+  "default_title" :"Mr Aparat",
+    "default_icon": "icons/icon128.png", 
+    "default_popup": "src/popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.aparat.com/*"],
+      "js": ["jquery-3.4.1.min.js" , "content.js"]
+    }
+  ],
+  "default_locale": "en",  
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "contentSettings",
+    "idle",
+    "management",
+    "notifications",
+    "tabs",
+	"activeTab",
+	"browsingData",
+	"storage"
+  ]
+}

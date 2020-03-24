@@ -1,0 +1,107 @@
+<!--default status is start-->
+
+<!DOCTYPE html>
+
+<html lang="EN">
+<head>
+    <script type="text/javascript" src="../jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../content.js"></script>
+
+
+</head>
+<body class="bg-dark overflow-hidden">
+
+<div class="container" style="width: 340px; ">
+    <div class="mx-auto  mt-2" style="width:150px">
+        <div class="mx-auto" style="width:80px">
+            <img src="../icons/icon128.png" alt="Mr Aparat" height="80" width="80">
+        </div>
+        <h5 class="text-center text-white pl-1 m-0"> Mr Aparat
+            <h6 class="text-center" style="color: #bfbfbf;"><small>mehdi_ziyaei@yahoo.com </small></h6>
+        </h5>
+
+        <div id="myProgress" class="progress">
+        <div id="progress" class="progress-bar progress-bar-striped active" role="progressbar"  aria-valuemin="0" aria-valuemax="100" style= "width: 0%;  background-color: #49cc0e"></div>
+        </div>
+
+    </div>
+    <hr class="bg-secondary">
+    <div class=" text-center "> 
+         <button class="btn btn-success mr-4" style="width: 85px;!important;" id="toggleBtn">Enable</button>
+        <button class="btn btn-primary" id="manageBtn">Manage</button>
+    </div>
+    <hr class="bg-secondary">
+    <div id="manageForm" style="display:none;margin-bottom:10px ">
+
+        <div id="accordion" class="bg-dark">
+            <div class="card" style="border-color: #393939;">
+                <div class="card-header collapsed btn bg-secondary" id="headingOne" data-toggle="collapse"
+                     data-target="#timePanel"
+                     aria-expanded="false" aria-controls="timePanel" style=" padding:0 0 0 0 ;height:40px;">
+                    <i style="font-size:20px; color: whitesmoke;">
+                        Time Setting
+                    </i>
+                </div>
+
+                <div id="timePanel" class="collapse" style="background-color: #495057" aria-labelledby="headingOne"
+                     data-parent="#accordion">
+                    <div class="card-body">
+
+                        <h6 style="color: #bfbfbf;"><small>Time Between Run (1-10 min) </small></h6>
+                        <input type="number" placeholder="Time Between Run(Min)" id="inputTimeBetweenRun" min="1"
+                               max="10"
+                               class="form-control">
+
+                        <h6 class="mt-1" style="color: #bfbfbf;"><small>Time Between Send Messages(25-300 Sec)</small>
+                        </h6>
+                        <input type="number" placeholder="Time Between Send Messages(Sec)" id="inputTimeBetweenMessage"
+                               min="25"
+                               max="300" class="form-control">
+
+                        <button id="saveBtn" class="btn btn-success mt-3" type="button">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="border-color: #393939;">
+                <div class="card-header btn collapsed bg-secondary" id="headingTwo" data-toggle="collapse"
+                     data-target="#MessagePanel"
+                     aria-expanded="false" aria-controls="MessagePanel" style=" padding:0 0 0 0 ;height:40px;">
+                    <i style="font-size:20px; color: whitesmoke;">
+                        Message Setting
+                    </i>
+                </div>
+                <div id="MessagePanel" class="collapse" style="background-color: #495057;" aria-labelledby="headingTwo"
+                     data-parent="#accordion">
+                    <div class="card-body">
+
+                        <div class="input-group mb-3">
+            <textarea id="messageInput" type="text" class="form-control focus" style="max-height:90px;min-height:40px"
+                      placeholder="Message"></textarea>
+                            <div class="input-group-append">
+                                <button id="addMessageBtn" class="btn btn-success" type="button">Add</button>
+                            </div>
+                        </div>
+                        <i id="selectValueI" style="display:none"></i>
+                        <hr class="bg-secondary">
+                        <div class="input-group mb-3">
+                            <select class="form-control " size="1" id="messageSelectList">
+                            </select>
+                        </div>
+                        <button id="editMessageBtn" class="btn btn-info" type="button">Edit Item</button>
+                        <button id="deleteMessageBtn" class="btn btn-danger" type="button">Delete Item</button>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+</div>
+<script type="text/javascript" src="../js/main.js"></script>
+</body>
+</html>
